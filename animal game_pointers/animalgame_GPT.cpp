@@ -33,7 +33,7 @@ string askGPT(string q) {
 		const string body = "{\"model\": \"text-davinci-003\", \"prompt\": \"" + q + "\", \"temperature\": 0.5, \"max_tokens\": 500}"; 
 		cpr::Response r = 
 cpr::Post(cpr::Url{"https://api.openai.com/v1/completions"}, 
-			cpr::Header{{"Authorization", "Bearer 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"},
+			cpr::Header{{"Authorization", "Bearer OPEN_AI_KEY"},
 			{"Content-type", "application/json"}}, 
 			cpr::Body{body}); 
 		auto d = json::parse(r.text); 
